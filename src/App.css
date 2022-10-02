@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
-}
+@import url("./fonts/fonts.css");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 992px) {
+  h1 br,
+  h2 br,
+  h3 br,
+  h4 br,
+  h5 br,
+  h6 br,
+  p br {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading {
+  font-size: 64px;
+  line-height: 64px;
+  font-family: "Helvetica-Bold";
 }
 
-.App-link {
-  color: #61dafb;
+.heading span {
+  font-family: "Helvetica-Bold";
+  background: -webkit-linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.desc {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Helvetica-Light";
+}
+
+.Event-main .heading-h2 {
+  font-family: "Helvetica-Bold";
+}
+
+.Event-main .desc,
+.Event-main .icon-desc {
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Helvetica-Light";
+  font-weight: 400;
+}
+
+.Event-main .desc .linkk,
+.Event-main .icon-desc span,
+.Event-main .icon-heading {
+  display: inline;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Helvetica-Bold";
+}
+
+@media (max-width: 575px) {
+  .Event-main .desc {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "Helvetica-Light";
+    font-weight: 400;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Event-main .desc .linkk,
+  .Event-main .icon-heading {
+    display: inline;
+    font-size: 16px;
+    line-height: 10px;
+    font-family: "Helvetica-Bold";
+  }
+
+  .Event-main .icon-desc span,
+  .Event-main .icon-desc {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
